@@ -1,9 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"github.com/Txug0/ApiGO/router"
+)
 
 func main() {
 
-	fmt.Println("teste")
+	router.InitializeRoutes()
 
 }
