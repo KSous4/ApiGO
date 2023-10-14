@@ -7,8 +7,12 @@ import (
 
 func InitializeRoutes(router *gin.Engine) {
 
-	userRoutesGroup := router.Group("/api/v1/user/")
+	v1 := router.Group("/api/v1/")
 
-	userRoutesGroup.POST("/createUser", UserHandler.CreateUser)
+	v1.GET("/User", UserHandler.ShowUser)
+	v1.POST("/User", UserHandler.CreateUser)
+	v1.PUT("/User", UserHandler.UpdateUser)
+	v1.DELETE("/User", UserHandler.DeleteUser)
+	v1.GET("/Users", UserHandler.ListUsers)
 
 }
