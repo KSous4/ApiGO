@@ -6,6 +6,6 @@ import (
 
 func main() {
 
-	router.InitializeRoutes()
+	router.InitializeRouter()
 
 }
